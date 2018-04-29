@@ -31,7 +31,7 @@ contract_interface = compiled_sol['<stdin>:Greeter']
 
 # web3.py instance
 # Change your IP address and Port to your instance
-w3 = Web3(HTTPProvider('http://35.198.34.207:8000'))
+w3 = Web3(HTTPProvider('http://35.198.20.187:8000'))
 
 # Instantiate and deploy contract
 contract = w3.eth.contract(abi=contract_interface['abi'], bytecode=contract_interface['bin'])
@@ -50,6 +50,9 @@ contract_instance = w3.eth.contract(address=contract_address, abi=abi,ContractFa
 
 # Getters + Setters for web3.eth.contract object
 print('Contract value Initially: {}'.format(contract_instance.greet()))
-contract_instance.setGreeting('Yashwanth', transact={'from': w3.eth.accounts[0]})
+a = contract_instance.setGreeting('Yashwanth', transact={'from': w3.eth.accounts[0]})
+print(a.hex())
+b = w3.eth.waitForTransactionReceipt(a)
+
 print('Setting value to: Yashwanth')
 print('Contract value: {}'.format(contract_instance.greet()))
