@@ -1,6 +1,8 @@
 # Blockchain Test Network
 Ethereum Blockchain test network to try, experiment and deploy various types of smart contracts.
 
+Check the article on Medium https://medium.com/@yashwanthvenati/setup-private-ethereum-blockchain-network-with-multiple-nodes-in-5-mins-708ab89b1966
+
 # Execution 
 This readme contains all the basic terminology of blockchain, and the refrences used to do this project.
 The execution of the project steps are in the report.pdf file in this project.
